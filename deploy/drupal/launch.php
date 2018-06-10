@@ -8,6 +8,7 @@ $dbname = $_POST["dbname"];
 $dbuser = $_POST["dbuser"];
 $dbpass = $_POST["dbpass"];
 $cmsname = $_POST["dbname"]."cms";
+$domname = $_POST["domname"];
 
 //FUNCTION TO GENERATE UNIQUE NAMES FOR THE CONTAINERS
 function uniqueidgen($dbname, $cmsname){
@@ -27,13 +28,14 @@ while ($uniqueidbool==false){
 	uniqueidgen();
 	else
 	$cmsport=exec("sudo /bin/bash /var/www/html/deploy/drupal/tests.sh 2");
-	exec("sudo /bin/bash /var/www/html/deploy/drupal/script.sh $rootpass $uniquedbname $dbuser $dbpass $uniquecmsname $cmsport");
+	exec("sudo /bin/bash /var/www/html/deploy/drupal/script.sh $rootpass $uniquedbname $dbuser $dbpass $uniquecmsname $cmsport $domname");
 	echo "
 	The information of the site you generated is as follows:</br>
 
 	Domain: localhost:$cmsport</br>
 	Database Unique String (Name): $uniquedbname</br>
 	Database User: $dbuser</br>
+	Domain Name: $domname</br>
 	";
 	$uniqueidbool=true;
 }

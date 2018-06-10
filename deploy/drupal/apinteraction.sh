@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ########################  CAMBIAR API Y DEFAULT WEBSERVER, hay que instalar jq  ##########################################
-
+########################  DESACTIVAR URL FORM HARDENING EN EL PERFIL AVANZADO DEL WAF  ######################
 case $1 in
 
 1)
