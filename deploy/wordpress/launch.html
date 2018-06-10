@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+</style>
+</head>
+<body>
+<div class="container">
+  <form id="contact" action="launch.php" method="post">
+    <h3>WordPress CMS Deploy</h3>
+    <h4>Fill in the required fields to deploy your own WordPress website.</h4>
+    <fieldset>
+      <input placeholder="Database Root Password" type="password" tabindex="1" name="rootpass" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Database Name" type="text" tabindex="2" name="dbname" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Database Username" type="text" tabindex="3" name="dbuser" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Database User Password" type="password" tabindex="4" name="dbpass" required>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Deploy WordPress CMS</button>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>
