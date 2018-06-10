@@ -1,6 +1,0 @@
-www-data ALL = NOPASSWD:/bin/bash pathtoscript/script.sh * * * * * *
-www-data ALL = NOPASSWD:/bin/bash /var/www/html/tests.sh * *   
-www-data ALL = NOPASSWD:/bin/bash /var/www/html/tests.sh *
-
-
-EN EL COMANDO, EL * ES CADA PARÁMETRO, PONER UNO POR CADA UNO QUE HAYA
