@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+</style>
+</head>
+<body>
+<div class="container">
+  <form id="contact" action="launch.php" method="post">
+    <h3>Joomla CMS Deploy</h3>
+    <h4>Fill in the required fields to deploy your own Joomla website.</h4>
+    <fieldset>
+      <input placeholder="Database Root Password" type="password" tabindex="1" name="rootpass" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Database Name (This will be turned into a unique string)" type="text" tabindex="2" name="dbname" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Database Username" type="text" tabindex="3" name="dbuser" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Database User Password" type="password" tabindex="4" name="dbpass" required>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Deploy Joomla CMS</button>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>
