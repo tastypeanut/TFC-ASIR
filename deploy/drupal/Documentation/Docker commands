@@ -1,0 +1,35 @@
+#################################################################################################################
+########												 ########
+######## MIRAR https://blog.wodby.com/6-reasons-to-deploy-drupal-8-with-docker-how-to-guide-b2f073e61672 ########
+########												 ########
+#################################################################################################################
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update
+
+sudo apt-get install docker-ce
+
+
+
+
+
+
+sudo docker pull mariadb
+sudo docker pull drupal
+
+
+sudo docker run --restart=always -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=drupal8 -e MYSQL_USER=drupal8 -e MYSQL_PASSWORD=drupal8 -v mariadb:/var/lib/mysql -d --name mariadb mariadb ########################## MIRAR QUE HACER PARA PODER CONFIGURAR LOS PUERTOS AL LANZAR LA INSTANCIA #######################################
+
+sudo docker run --restart=always --name drupal8 --link mariadb:mysql -p 80:80 -d drupal
