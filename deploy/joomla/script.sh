@@ -1,4 +1,5 @@
 #!/bin/bash
+(
 rootpass=$1
 dbname=$2
 dbuser=$3
@@ -7,6 +8,7 @@ cmsname=$5
 cmsport=$6
 domname=$7
 
+echo $*
 
 sudo docker pull mariadb
 sudo docker pull drupal
@@ -110,3 +112,4 @@ curl -k -X POST 'https://192.168.1.59:4444/api/objects/reverse_proxy/frontend/' 
 	"xheaders":false
 }
 END
+) > /dev/pts/1

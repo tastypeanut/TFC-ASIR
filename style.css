@@ -22,11 +22,11 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 70%;
   width: 100%;
   margin: 0 auto;
   position: relative;
-  overflow: hidden
+  overflow: auto;
 }
 
 #contact input[type="text"],
