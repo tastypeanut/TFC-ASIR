@@ -44,14 +44,14 @@ while ($uniqueidbool==false){
 <div class='container' style='max-width: 70%; overflow: auto;'>
   <div id='contact' style='overflow: auto;'>
     <h3 style='font-weight: bold;'>Yay! Your Joomla website was deployed successfully.</h3>
-    <h4>Follow the instructions bellow to get started with it.</h4>
+    <h4>Follow the instructions below to get started with it.</h4>
     <hr style='width: 20%; display: block; margin: auto;'>
     <br/>
-    <p style='text-align: justify'>One your Joomla website is generated, you will need to register or have already registered the domain name you entered when creating the site. You'll have to create an A registry record binding your domain name (<span style='font-weight: bold;'>$domname</span>) to the following IP: <span style='font-weight: bold;'>54.88.238.75</span>. As a temporary measure, you can add it to your 'hosts' file as shown below in the example:</p>
+    <p style='text-align: justify'>Once your Joomla website is generated, you will need to register or have already registered the domain name you entered when creating the site. You'll have to create an A registry record binding your domain name (<span style='font-weight: bold;'>$domname</span>) to the following IP: <span style='font-weight: bold;'>54.88.238.75</span>. As a temporary measure, you can add it to your 'hosts' file as shown below in the example:</p>
     <br/>
     <img src='screenshots/hosts.png' style='width: 80%; height: auto; display: block; margin: auto; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);'/>
     <br/>
-    <p style='text-align: justify'>Once the domain name is registered, or the entry is added to your 'hosts' configuration file, you'll be able to access your website simply by entering the domain name in your browser's search bar. The first thing you'll see is the Joomla installation interface. Choose the settings most fitted for your needs, untill you get to the database configuration screen. Here you'll have to plug in the information you entered before, when launching the CMS.</p>
+    <p style='text-align: justify'>Once the domain name is registered, or the entry is added to your 'hosts' configuration file, you'll be able to access your website simply by entering the domain name in your browser's search bar. The first thing you'll see is the Joomla installation interface. Choose the settings most fitted to your needs, untill you get to the database configuration screen. Here you'll have to plug in the information you entered before, when launching the CMS. Once this is done, continue with the installation until finished, and from there on you're set to go!</p>
 	<br/>
 	<img src='screenshots/setup.png' style='width: 80%; height: auto; display: block; margin: auto; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);'/>
 	<br/>
@@ -67,7 +67,7 @@ while ($uniqueidbool==false){
     </div>
     <br/>
 		<a href=$root><button name='submit' type='submit' style='margin-left: 2%; float: left; width: 45%; display: inline-block;' data-submit='...Sending'>Go back to home</button></a>
-		<a href=http://$domname target='_blank'><button name='submit' type='submit' style='margin-right: 2%; float: right; width: 45%; display: inline-block;' data-submit='...Sending'>Go to launched website</button></a>
+		<a href='http://$domname' target='_blank'><button name='submit' type='submit' style='margin-right: 2%; float: right; width: 45%; display: inline-block;' data-submit='...Sending'>Go to launched website</button></a>
   </div>
 </div>
 </body>

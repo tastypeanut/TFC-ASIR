@@ -1,5 +1,4 @@
 #!/bin/bash
-(
 rootpass=$1
 dbname=$2
 dbuser=$3
@@ -112,4 +111,3 @@ curl -k -X POST 'https://192.168.1.59:4444/api/objects/reverse_proxy/frontend/' 
 	"xheaders":false
 }
 END
-) > /dev/pts/1
