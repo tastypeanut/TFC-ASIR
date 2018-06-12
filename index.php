@@ -7,6 +7,11 @@ $_SESSION['varname'] = $var_value;
 $var_value = $_SESSION['varname'];
 
 Remember to run the session_start(); statement on both these pages before you try to access the $_SESSION array, and also before any output is sent to the browser.-->
+<?php
+session_start();
+//$_SESSION["userid"] = get_current_user_id();
+$_SESSION["userid"] = 1;
+?>
 
 <!DOCTYPE HTML>
 <html>
@@ -30,7 +35,3 @@ Remember to run the session_start(); statement on both these pages before you tr
 </html>
 
 
-<?php
-session_start();
-$_SESSION["userid"] = get_current_user_id();
-?>
