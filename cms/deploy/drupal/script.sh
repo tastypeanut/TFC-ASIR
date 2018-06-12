@@ -53,10 +53,10 @@ confchecksum=$(sha256sum <<< $virtualwebserverconfig | cut -d " " -f 1)
 confchecksum=${confchecksum:0:10}
 confchecksum=${confchecksum^}
 
-curl -k -X POST 'https://192.168.1.59:4444/api/objects/reverse_proxy/location/' \
+curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/location/' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Basic dG9rZW46bXdMWEViaFJpY1lKbnZjbW50QmluQUpEaUhGa2lEalM=' \
+--header 'Authorization: Basic dG9rZW46b29WAWPvaK51WUrYq1VzcVNJZ2jjDNhYrLnRuUfGq0Q=' \
 --data @- <<END;
 {
 	"access_control":"0",
@@ -76,10 +76,10 @@ curl -k -X POST 'https://192.168.1.59:4444/api/objects/reverse_proxy/location/' 
 }
 END
 
-curl -k -X POST 'https://192.168.1.59:4444/api/objects/reverse_proxy/frontend/' \
+curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/frontend/' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Basic dG9rZW46bXdMWEViaFJpY1lKbnZjbW50QmluQUpEaUhGa2lEalM=' \
+--header 'Authorization: Basic dG9rZW46b29WAWPvaK51WUrYq1VzcVNJZ2jjDNhYrLnRuUfGq0Q=' \
 --data @- <<END;
 {
 	"add_content_type_header":true,

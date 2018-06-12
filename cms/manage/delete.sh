@@ -13,8 +13,8 @@ sudo docker rm -v $2
 temp=$RANDOM.temp
 curl -X GET \
 --header 'Accept: application/json' \
---header 'Authorization: Basic dG9rZW46bXdMWEViaFJpY1lKbnZjbW50QmluQUpEaUhGa2lEalM=' \
-'https://192.168.1.59:4444/api/objects/reverse_proxy/frontend/' -k -s > "$temp"
+--header 'Authorization: Basic dG9rZW46b29WAWPvaK51WUrYq1VzcVNJZ2jjDNhYrLnRuUfGq0Q=' \
+'https://10.0.0.200:4444/api/objects/reverse_proxy/frontend/' -k -s > "$temp"
 var=$(wc -l "$temp" | cut -d " " -f 1)
 
 
@@ -32,5 +32,5 @@ rm "$temp"
 
 curl -k -X DELETE --header 'Accept: application/json' \
 --header 'X-Restd-Err-Ack: all' \
---header 'Authorization: Basic dG9rZW46bXdMWEViaFJpY1lKbnZjbW50QmluQUpEaUhGa2lEalM=' \
-"https://192.168.1.59:4444/api/objects/reverse_proxy/frontend/$ref"
+--header 'Authorization: Basic dG9rZW46b29WAWPvaK51WUrYq1VzcVNJZ2jjDNhYrLnRuUfGq0Q=' \
+"https://10.0.0.200:4444/api/objects/reverse_proxy/frontend/$ref"
