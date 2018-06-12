@@ -10,7 +10,7 @@
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #0678BE;
+  background: #3b3b3b;
 }
 
 .container {

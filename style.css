@@ -10,6 +10,7 @@
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #0678BE;
+  background: #3b3b3b;
 }
 
 .container {
@@ -43,7 +44,6 @@ body {
   background: #F9F9F9;
   padding: 25px;
   margin: 50px 0;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #contact h3 {
@@ -120,7 +120,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .copyright {

@@ -37,7 +37,7 @@ if (!empty($userid) && $userid != 0){
 //CHECK TO REALLY MAKE SURE NAMES DO NOT EXIST BEFORE CREATING THE CONTAINERS
     if (!empty($rootpass) && !empty($dbname) && !empty($dbuser) && !empty($dbpass) && !empty($domname)){
         while ($uniqueidbool==false){
-        	if (exec("sudo /bin/bash /var/www/html/deploy/drupal/tests.sh 1 $uniquedbname")){
+        	if (exec("sudo /bin/bash /opt/cms/deploy/drupal/tests.sh 1 $uniquedbname")){
         	   uniqueidgen();
         	} else { 
 
@@ -49,8 +49,8 @@ if (!empty($userid) && $userid != 0){
 
             	if ($conn->query($sql) === TRUE) {
                     
-            		$cmsport=exec("sudo /bin/bash /var/www/html/deploy/drupal/tests.sh 2");
-            		exec("sudo /bin/bash /var/www/html/deploy/drupal/script.sh $rootpass $uniquedbname $dbuser $dbpass $uniquecmsname $cmsport $domname");
+            		$cmsport=exec("sudo /bin/bash /opt/cms/deploy/drupal/tests.sh 2");
+            		exec("sudo /bin/bash /opt/cms/deploy/drupal/script.sh $rootpass $uniquedbname $dbuser $dbpass $uniquecmsname $cmsport $domname");
             		echo " 
             		<!DOCTYPE HTML>
             		<html>

@@ -36,7 +36,7 @@ if (!empty($userid) && $userid != 0){
 //CHECK TO REALLY MAKE SURE NAMES DO NOT EXIST BEFORE CREATING THE CONTAINERS
 	if (!empty($rootpass) && !empty($dbname) && !empty($dbuser) && !empty($dbpass) && !empty($domname)){
 		while ($uniqueidbool==false){
-			if (exec("sudo /bin/bash /var/www/html/deploy/drupal/tests.sh 1 $uniquedbname")){
+			if (exec("sudo /bin/bash /opt/cms/deploy/wordpress/tests.sh 1 $uniquedbname")){
 			   uniqueidgen();
 			} else { 
 
@@ -47,8 +47,8 @@ if (!empty($userid) && $userid != 0){
 			   $sql = "INSERT INTO php.containers (user_id, cms, cms_container_name, database_container_name, domain_name) VALUES ( $userid, '$cms', '$uniquecmsname', '$uniquedbname', '$domname')";
 				if ($conn->query($sql) === TRUE) {
 
-                	$cmsport=exec("sudo /bin/bash /var/www/html/deploy/wordpress/tests.sh 2");
-                	exec("sudo /bin/bash /var/www/html/deploy/wordpress/script.sh $rootpass $uniquedbname $dbuser $dbpass $uniquecmsname $cmsport $domname");
+                	$cmsport=exec("sudo /bin/bash /opt/cms/deploy/wordpress/tests.sh 2");
+                	exec("sudo /bin/bash /opt/cms/deploy/wordpress/script.sh $rootpass $uniquedbname $dbuser $dbpass $uniquecmsname $cmsport $domname");
                 	echo "
                     <!DOCTYPE HTML>
                     <html>

@@ -23,7 +23,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-	exec("sudo /bin/bash /var/www/html/manage/delete.sh " .  $row["database_container_name"] . " " . $row["cms_container_name"] . " " . $row["domain_name"]);
+	exec("sudo /bin/bash /opt/cms/manage/delete.sh " .  $row["database_container_name"] . " " . $row["cms_container_name"] . " " . $row["domain_name"]);
 	echo "<html><head><meta http-equiv='refresh' content='0; url= manage.php'/></head></html>";
     }
 } else {
