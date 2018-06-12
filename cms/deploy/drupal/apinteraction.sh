@@ -49,7 +49,7 @@ curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/location/' \
 	"access_control":"0",
 	"allowed_networks":["REF_NetworkAny"],
 	"auth_profile":"",
-	"backend":["REF_RevBacDefauWebServe"],
+	"backend":["REF_RevBacNginxReverProxy"],
 	"be_path":"",
 	"comment":"",
 	"denied_networks":[],

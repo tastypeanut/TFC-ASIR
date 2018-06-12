@@ -14,10 +14,6 @@ sudo docker run --restart=always -e MYSQL_ROOT_PASSWORD="$rootpass" -e MYSQL_DAT
 sudo docker run --restart=always --name "$cmsname" --link "$dbname":mysql -p "$cmsport":80 -d drupal
 
 
-########################  CAMBIAR API Y DEFAULT WEBSERVER (REF_RevBacDefauWebServe), hay que instalar jq  ##########################################
-########################  DESACTIVAR URL FORM HARDENING EN EL PERFIL AVANZADO DEL WAF  ######################
-
-
 virtualwebserverconfig=$(echo "
 {
 	"add_content_type_header":true,
@@ -62,7 +58,7 @@ curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/location/' \
 	"access_control":"0",
 	"allowed_networks":["REF_NetworkAny"],
 	"auth_profile":"",
-	"backend":["REF_RevBacDefauWebServe"],
+	"backend":["REF_RevBacNginxReverProxy"],
 	"be_path":"",
 	"comment":"",
 	"denied_networks":[],

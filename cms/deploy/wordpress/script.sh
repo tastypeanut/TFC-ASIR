@@ -16,10 +16,6 @@ sudo docker run --restart=always -e WORDPRESS_DB_USER="$dbuser" -e WORDPRESS_DB_
 
 
 
-########################  CAMBIAR API Y DEFAULT WEBSERVER (REF_RevBacDefauWebServe), hay que instalar jq  ##########################################
-########################  DESACTIVAR URL FORM HARDENING EN EL PERFIL AVANZADO DEL WAF  ######################
-
-
 virtualwebserverconfig=$(echo "
 {
 	"add_content_type_header":true,
@@ -64,7 +60,7 @@ curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/location/' \
 	"access_control":"0",
 	"allowed_networks":["REF_NetworkAny"],
 	"auth_profile":"",
-	"backend":["REF_RevBacDefauWebServe"],
+	"backend":["REF_RevBacNginxReverProxy"],
 	"be_path":"",
 	"comment":"",
 	"denied_networks":[],
