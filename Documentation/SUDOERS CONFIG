@@ -1,0 +1,13 @@
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/drupal/script.sh * * * * * * *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/drupal/tests.sh * *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/drupal/tests.sh *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/joomla/script.sh * * * * * * *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/joomla/tests.sh * *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/joomla/tests.sh *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/wordpress/script.sh * * * * * * *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/wordpress/tests.sh * *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/deploy/wordpress/tests.sh *
+www-data ALL = NOPASSWD:/bin/bash /var/www/html/manage/delete.sh * * *
+
+
+EN EL COMANDO, EL * ES CADA PARÁMETRO, PONER UNO POR CADA UNO QUE HAYA
