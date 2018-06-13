@@ -108,3 +108,22 @@ curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/frontend/' \
 	"xheaders":false
 }
 END
+
+echo "
+server {
+    listen 80;
+    server_name $domname;
+
+    location / {
+        proxy_pass http://10.0.1.201:$cmsport/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+" > "$dbname"
+
+scp -i "/opt/cms/keys/NGINXProxySSHKey.pem" $dbname ubuntu@10.0.1.200:/home/ubuntu/
+ssh -i "/opt/cms/keys/NGINXProxySSHKey.pem" ubuntu@10.0.1.200 "sudo mv /home/ubuntu/$dbname /etc/nginx/sites-available && sudo ln -s /etc/nginx/sites-enabled/$dbname /etc/nginx/sites-available/$dbname"
+sudo rm $dbname
