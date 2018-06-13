@@ -38,20 +38,20 @@ if ($result->num_rows > 0) {
     	echo "<div style='width: 25%; display: inline-block; text-align: center';>";
     	switch ($row["cms"]){
     		case "Drupal":
-    			echo "<img src='logos/drupal.jpeg'/></br>";
+    			echo "<img src='logos/drupal.jpeg'/>";
     		break;
     		case "WordPress":
-    			echo "<img src='logos/wordpress.jpeg'/></br>";
+    			echo "<img src='logos/wordpress.jpeg'/>";
     		break;
     		case "Joomla":
-    			echo "<img src='logos/joomla.jpeg'/></br>";
+    			echo "<img src='logos/joomla.jpeg'/>";
     		break;
     	}
-        echo "</br>";
+        echo "<br/>";
         echo $row["cms"];
-        echo "</br>";
+        echo "<br/>";
         echo $row["domain_name"];
-        echo "</br>";
+        echo "<br/>";
         echo "<form action='delete.php' method='post'>";
         echo "<a href='delete.php' style='text-decoration:none' onclick='return confirm(\"Are you sure you want to delete this container?\")'><button name='submit' type='submit' style='display: block; margin: auto; width: 60%; margin-bottom: 10%;' data-submit='...Sending' value='" . $row["database_container_name"] . "'>Delete Container</button></a>";
         echo "</form>";
