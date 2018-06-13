@@ -54,7 +54,7 @@ confchecksum=${confchecksum^}
 curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/location/' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Basic dG9rZW46b29WAWPvaK51WUrYq1VzcVNJZ2jjDNhYrLnRuUfGq0Q=' \
+--header 'Authorization: Basic YXBpX3VzZXI6YXBpdXNlcg==' \
 --data @- <<END;
 {
 	"access_control":"0",
@@ -77,7 +77,7 @@ END
 curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/frontend/' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Basic dG9rZW46b29WAWPvaK51WUrYq1VzcVNJZ2jjDNhYrLnRuUfGq0Q=' \
+--header 'Authorization: Basic YXBpX3VzZXI6YXBpdXNlcg==' \
 --data @- <<END;
 {
 	"add_content_type_header":true,
