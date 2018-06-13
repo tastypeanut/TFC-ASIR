@@ -32,7 +32,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 	echo "<h3>Your launched containers</h3>";
-	echo "</br>";
+	echo "<br/>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
     	echo "<div style='width: 25%; display: inline-block; text-align: center';>";
