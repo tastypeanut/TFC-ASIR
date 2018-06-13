@@ -35,4 +35,4 @@ curl -k -X DELETE --header 'Accept: application/json' \
 --header 'Authorization: Basic YXBpX3VzZXI6YXBpdXNlcg==' \
 "https://10.0.0.200:4444/api/objects/reverse_proxy/frontend/$ref"
 
-ssh -i "/opt/cms/keys/NGINXProxySSHKey.pem" ubuntu@10.0.1.200 "sudo rm /etc/nginx/sites-enabled/$database_container_name && sudo rm /etc/nginx/sites-available/$database_container_name"
+ssh -i "/opt/cms/keys/NGINXProxySSHKey.pem" ubuntu@10.0.1.200 "sudo rm /etc/nginx/sites-enabled/$database_container_name && sudo rm /etc/nginx/sites-available/$database_container_name && sudo service nginx reload"
