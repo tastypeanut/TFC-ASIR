@@ -47,6 +47,7 @@ if ($result->num_rows > 0) {
     			echo "<img src='logos/joomla.jpeg'/></br>";
     		break;
     	}
+        echo "</br>"
         echo $row["cms"];
         echo "</br>";
         echo $row["domain_name"];
