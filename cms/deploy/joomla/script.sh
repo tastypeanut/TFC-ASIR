@@ -7,7 +7,6 @@ cmsname=$5
 cmsport=$6
 domname=$7
 
-echo $*
 
 sudo docker pull mariadb
 sudo docker pull drupal
