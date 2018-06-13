@@ -109,7 +109,7 @@ curl -k -X POST 'https://10.0.0.200:4444/api/objects/reverse_proxy/frontend/' \
 }
 END
 
-echo "
+sudo echo "
 server {
     listen 80;
     server_name $domname;
@@ -125,5 +125,5 @@ server {
 " > "$dbname"
 
 scp -i "/opt/cms/keys/NGINXProxySSHKey.pem" $dbname ubuntu@10.0.1.200:/home/ubuntu/
-ssh -i "/opt/cms/keys/NGINXProxySSHKey.pem" ubuntu@10.0.1.200 "sudo mv /home/ubuntu/$dbname /etc/nginx/sites-available && sudo ln -s /etc/nginx/sites-enabled/$dbname /etc/nginx/sites-available/$dbname"
+ssh -i "/opt/cms/keys/NGINXProxySSHKey.pem" ubuntu@10.0.1.200 "sudo mv /home/ubuntu/$dbname /etc/nginx/sites-available && sudo ln -s /etc/nginx/sites-available/$dbname /etc/nginx/sites-enabled/$dbname"
 sudo rm $dbname
