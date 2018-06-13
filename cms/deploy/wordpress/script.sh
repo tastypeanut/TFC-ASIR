@@ -11,7 +11,7 @@ domname=$7
 sudo docker pull mariadb
 sudo docker pull drupal
 sudo docker run --restart=always -e MYSQL_ROOT_PASSWORD="$rootpass" -e MYSQL_DATABASE="$dbname" -e MYSQL_USER="$dbuser" -e MYSQL_PASSWORD="$dbpass" -v "$dbname":/var/lib/mysql -d --name "$dbname" mariadb
-sudo docker run --restart=always --name "$cmsname" --link "$dbname":mysql -p "$cmsport":80 -d drupal
+sudo docker run --restart=always -e WORDPRESS_DB_USER="$dbuser" -e WORDPRESS_DB_PASSWORD="$dbpass" -e WORDPRESS_DB_NAME="$dbname" -p "$cmsport":80 -v /opt/wordpress/html:/var/www/html --link "$dbname":mysql --name "$cmsname" -d wordpress
 
 sudo echo "
 server {
