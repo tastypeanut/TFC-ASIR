@@ -1,0 +1,17 @@
+DATABASE CREATION TO INSERT USER INFORMATION:
+
+sudo apt-get install mysql-client mysql-server
+
+mysql -u root -p
+
+CREATE USER 'php'@'localhost' IDENTIFIED BY 'password';
+
+CREATE DATABASE php;
+
+USE php;
+
+CREATE TABLE containers (user_id INT(20), cms VARCHAR(20), cms_container_name VARCHAR(300), database_container_name VARCHAR(303), domain_name VARCHAR(255));
+
+GRANT ALL PRIVILEGES ON php.containers TO 'php'@'localhost';
+
+flush privileges;
