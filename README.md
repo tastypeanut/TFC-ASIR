@@ -8,4 +8,10 @@ Este proyecto está montado sobre un VPC en AWS. El servicio que se ofrece es ho
 
 </br>  
 
-## Funcionamiento
+## Composición
+El código aquí mostrado se distribuye en dos directorios principales: **/opt/cms** y **/var/www/html/website**. Para poder comenzar con él. hay que asegurarse de que todo esté en su sitio. Lo primero que se tiene que hacer es clonar el repositorio y mover cada cosa a su sitio, con los comandos que se muestran a continuación:
+```
+git clone https://github.com/tastypeanut/Website.git && cd Website
+mv cms /opt
+mkdir /var/www/html/website && cp -r !(README.md) /var/www/html/website
+```
